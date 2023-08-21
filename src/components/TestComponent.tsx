@@ -1,8 +1,17 @@
-import React from "react";
-import styles from "./styles.module.css";
+import React from 'react';
+import { useTranslations } from 'next-intl';
+import { Button } from '@mui/material';
 
 const TestComponent = () => {
-  return <div className={styles.testComponent}>a test</div>;
+  const t = useTranslations();
+
+  return (
+    <div>
+      <Button variant="contained" className="text-3xl">
+        {t('test')}
+      </Button>
+    </div>
+  );
 };
 
 export default TestComponent;
